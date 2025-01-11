@@ -1,0 +1,193 @@
+@use "../util/" as u;
+
+.main {
+  margin: u.rem(50) auto;
+
+  &__grid {
+    @media screen and (min-width: u.em(1400)) {
+      display: grid;
+      grid-template-columns: repeat(4, u.rem(300));
+      grid-template-rows: repeat(2, u.rem(350));
+      justify-content: center;
+      align-items: center;
+      gap: u.rem(30);
+      margin: u.rem(80) 0;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    @media screen and (min-width: u.em(1400)) {
+      gap: u.rem(30);
+      margin: 0;
+    }
+
+    position: relative;
+    padding: u.rem(30) u.rem(40);
+    margin: 0 auto;
+    margin-bottom: u.rem(30);
+    border-radius: u.rem(10);
+    background-color: var(--p-violet);
+    max-width: u.rem(468);
+    max-height: u.rem(790);
+    min-height: u.rem(300);
+
+    &--svg {
+      @media screen and (min-width: u.em(1400)) {
+        width: 110px;
+        transform: scale(1.2);
+        top: 15px;
+        right: 100px;
+      }
+      position: absolute;
+      top: u.rem(23);
+      right: u.rem(-170);
+      transform: scale(1.3);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &--img {
+      width: u.rem(38);
+      border-radius: 50%;
+      outline: 2px solid var(--p-p-violet);
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      margin-left: u.rem(20);
+
+      &--name {
+        @media screen and (min-width: u.em(1400)) {
+          font-size: u.rem(16);
+        }
+
+        margin-bottom: u.rem(1);
+        font-size: u.rem(18);
+        color: var(--p-white);
+      }
+
+      &--desc {
+        @media screen and (min-width: u.em(1400)) {
+          font-size: u.rem(13);
+        }
+
+        font-size: u.rem(15);
+        color: var(--p-p-violet);
+      }
+    }
+  }
+
+  &__title {
+    @media screen and (min-width: u.em(1400)) {
+      font-size: u.rem(23);
+    }
+
+    position: relative;
+    padding: u.rem(20) 0;
+    font-size: u.rem(31);
+    z-index: 1;
+    color: var(--p-white);
+
+    &--sub {
+      @media screen and (min-width: u.em(1400)) {
+        font-size: u.rem(15);
+      }
+
+      font-size: u.rem(20);
+      line-height: 1.5;
+      color: var(--p-p-violet);
+    }
+  }
+}
+
+//Universal
+.padding {
+  margin-bottom: u.rem(15);
+}
+.gray-sub {
+  color: var(--n-light-gray);
+}
+
+.gray-desc {
+  color: var(--n-light-gray);
+}
+
+.outline {
+  outline: none;
+}
+
+// Jonathan Walters
+.gray {
+  background-color: var(--p-light-blue);
+}
+
+// Jeanette Harmon / Kira Whittle
+
+.white {
+  background-color: var(--p-white);
+}
+
+.light-gray-name {
+  color: var(--p-light-blue);
+}
+
+.light-gray-title {
+  color: var(--p-light-blue);
+}
+
+//Patrick Abrams
+.dark-gray {
+  background-color: var(--p-dark-blue);
+}
+
+.dark-outline {
+  outline: 2px solid var(--p-violet);
+}
+
+.dark-gray-desc {
+  color: var(--p-lighter-blue);
+}
+
+.dark-gray-sub {
+  color: var(--p-lighter-blue);
+}
+
+// Grid Layout
+@media screen and (min-width: u.em(1400)) {
+  //Daniel Clifford
+  .grid-1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    min-width: u.rem(630);
+  }
+
+  //Jonathan Walters
+  .grid-2 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  //Jeanette Harmon
+  .grid-3 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  //Patrick Abrams
+  .grid-4 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    min-width: u.rem(630);
+  }
+
+  //Kira Whittle
+  .grid-5 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+}
