@@ -10,7 +10,8 @@
       grid-template-rows: repeat(2, u.rem(350));
       justify-content: center;
       align-items: center;
-      gap: u.rem(30);
+      column-gap: u.rem(30);
+      row-gap: u.rem(10);
       margin: u.rem(80) 0;
       width: 100%;
     }
